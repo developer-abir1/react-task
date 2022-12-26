@@ -9,7 +9,7 @@ const UpdateInfo = () => {
 
   const [users, setUsers] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:8000/users/${id}`)
+    fetch(`https://task-server-lake.vercel.app/users/${id}`)
       .then((response) => response.json())
       .then((data) => setUsers(data));
   });
@@ -22,7 +22,7 @@ const UpdateInfo = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch(`http://localhost:8000/users/${id}`, {
+    fetch(`https://task-server-lake.vercel.app/users/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),

@@ -7,22 +7,24 @@ const Home = () => {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data, e) => {
-    fetch('http://localhost:8000/users', {
+    fetch('https://task-server-lake.vercel.app/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.acknowledged) {
+        if (data) {
           toast.success('Information Added successfully');
           console.log(data);
         }
       });
+    reset();
   };
 
   return (

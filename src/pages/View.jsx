@@ -9,13 +9,13 @@ const View = () => {
   const [users, setusers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/users')
+    fetch('https://task-server-lake.vercel.app/users')
       .then((response) => response.json())
       .then((data) => setusers(data.data));
   }, []);
 
   const handleDeleteInfo = (id) => {
-    fetch(`http://localhost:8000/users/${id}`, {
+    fetch(`https://task-server-lake.vercel.app/users/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
