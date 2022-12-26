@@ -48,7 +48,7 @@ const View = () => {
             <tr>
               <th></th>
               <th>Name</th>
-              <th>Company Name</th>
+              <th>Item Name</th>
               <th>Validation</th>
               <th>Update</th>
               <th>Delete</th>
