@@ -38,7 +38,7 @@ const UpdateInfo = () => {
   return (
     <div>
       <div className=" flex justify-center items-center text-white">
-        {' '}
+        <h2 className="text-center">Update Information</h2>
         <div className="  border-2 bg-[#222831] w-[500px] h-[400px] px-2 py-2 rounded-md my-4">
           <form onSubmit={handleSubmit(onSubmit)}>
             <label className="text-zl mb-2"> Enter Name :</label>
