@@ -21,8 +21,7 @@ const Home = () => {
       .then((data) => {
         if (data) {
           toast.success('Information Added successfully');
-          console.log(data);
-        }
+         }
       });
     reset();
   };
